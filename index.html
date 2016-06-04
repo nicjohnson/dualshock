@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <title>DS4</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+    <script>
+      var socket = io();
+      socket.on('r2:press', function(msg) {
+        $('#r2').addClass('pressed');
+      });
+      socket.on('r2:release', function(msg) {
+        $('#r2').removeClass('pressed');
+      });
+      socket.on('left:move', function(msg) {
+        $('#leftmove').text('x:' + msg.x + ' y:' + msg.y);
+      });
+      socket.on('right:move', function(msg) {
+        $('#rightmove').text('x:' + msg.x + ' y:' + msg.y);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="r2" class="button">r2</div>
+    <div id="leftmove">left:move Ready...</div>
+    <div id="rightmove">right:move Ready...</div>
+  </body>
+  <style>
+    .button {
+      background: #ccc;
+    }
+    .button.pressed {
+      background: #0c0;
+    }
+  </style>
+</html>

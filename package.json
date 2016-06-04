@@ -1,0 +1,25 @@
+{
+  "name": "dualshock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "dualshock-controller": "^0.6.9",
+    "express": "^4.13.4",
+    "socket.io": "^1.4.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicjohnson/dualshock.git"
+  },
+  "author": "Nic Johnson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nicjohnson/dualshock/issues"
+  },
+  "homepage": "https://github.com/nicjohnson/dualshock#readme"
+}
